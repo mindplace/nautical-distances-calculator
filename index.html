@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="assets/materialize/css/materialize.css" rel="stylesheet" type="text/css">
+    <link href="assets/style.css" rel="stylesheet" type="text/css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="src/main.js"></script>
+    <script src="assets/materialize/js/materialize.js"></script>
+
+    <title>Airport to Airport Distance Calculator</title>
+  </head>
+  <body>
+    <nav class="light-blue lighten-1" role="navigation">
+      <div class="nav-wrapper container">
+        <a id="logo-container" href="#" class="brand-logo center">Airport-to-airport Nautical Distance Calculator</a>
+      </div>
+    </nav>
+
+    <main>
+      <div class="middle-form-wrapper">
+        <div class="row no-margin">
+          <div class="col s12 m6">
+            <input id="pac-input-from" class="controls" type="text"
+                    placeholder="Starting from this airport...">
+          </div>
+
+          <div class="col s12 m6">
+            <input id="pac-input-to" class="controls" type="text"
+                    placeholder="Ending up at this airport...">
+          </div>
+        </div>
+      </div>
+
+      <div class="nautical-distance-wrapper">
+        <div id="nautical-distance-card" class="row">
+          <div class="col s12 m12">
+            <div class="card light-blue lighten-1">
+              <div class="center card-content white-text">
+                <span class="card-title">Distance in nautical miles: <span class="red-text" id="distance"><small>try searching!</small></span></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="map-wrapper row">
+        <div class="col s12 m12">
+          <div id="map"></div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="page-footer light-blue lighten-3">
+      <div class="container">
+        <div class="row">
+          <div class="col l4 s12">
+            <p class="grey-text text-lighten-4"><b>Question 2a, Front-End Web Programming</b>: Create a web app that calculates the distance (in nautical miles) between two airports. The app should auto- complete the airports and should feature all airports in the U.S. only. Bonus: plot the trip on Google maps.</p>
+          </div>
+          <div class="col l6 offset-l2 s12 right-align">
+            <h5 class="grey-text text-lighten-4">Cool things this mini-site uses</h5>
+            <ul>
+              <li><a class="white-text" href="http://materializecss.com/" target="blank">Materialize</a></li>
+              <li><a class="white-text" href="https://developers.google.com/maps/" target="blank">Google Maps API</a></li>
+              <li><a class="white-text" href="https://developers.google.com/places/" target="blank">Google Places API</a></li>
+              <li><a class="white-text" href="http://www.geodatasource.com/developers/javascript" target="blank">Nautical distance algorithm</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        <div class="container">
+          <small>I really love footers. I think they make pages look more professional. Maybe it's a nerd thing.</small>
+        <a class="grey-text text-lighten-4 right" href="http://github.com/mindplace">Click me for Github repos!</a>
+        </div>
+      </div>
+    </footer>
+
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC46HJ8se4FRra20t24l9U3zprO7DInIb0&libraries=places&callback=initMap">
+    </script>
+  </body>
+</html>
