@@ -4,7 +4,7 @@
 .hide {
   display: none;
 }
-main {
+.main {
   width: 90%;
   margin: auto;
 }
@@ -23,4 +23,8 @@ main {
 }
 .no-margin input {
   margin-bottom: 0;
+}
+.bold {
+  font-weight: 700;
+  font-size: 18px;
 }
