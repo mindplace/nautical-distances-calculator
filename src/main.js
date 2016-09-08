@@ -63,7 +63,6 @@ function initMap() {
 
     // set initial restrictions for Google Maps/Places Autocomplete service
     var options = {
-        //  types: ['establishment'], // establishments only
          componentRestrictions: {country: 'us'} //USA only
     };
 
@@ -81,8 +80,8 @@ function initMap() {
     var inputFrom = (document.getElementById('pac-input-from'));
     var inputTo = (document.getElementById('pac-input-to'));
 
-    var autocompleteFrom = new google.maps.places.Autocomplete(inputFrom);
-    var autocompleteTo = new google.maps.places.Autocomplete(inputTo);
+    var autocompleteFrom = new google.maps.places.Autocomplete(inputFrom, options);
+    var autocompleteTo = new google.maps.places.Autocomplete(inputTo, options);
 
     var bothLocations = {
         'firstLocation': undefined,
