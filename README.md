@@ -4,21 +4,22 @@ Challenge: Create a web app that calculates the distance (in nautical miles) bet
 ## Implementation
 Please note that documentation contained in this README is primarily meant to supplement the comments in the code.
 
-#### Libraries and external resources I used in this app
-[Materialize](http://materializecss.com/): apart from being beautiful and clean, I used Materialize because I wanted all the Google elements to feel natural on the same page. 
-[Google Maps API](https://developers.google.com/maps/)
-[Google Geocoder Api](https://developers.google.com/maps/documentation/geocoding/start)
-[jQuery Autocomplete](https://jqueryui.com/autocomplete/)
-[Airports Open Data](http://ourairports.com/data/)
-[Nautical Distance algorithm](http://www.geodatasource.com/developers/javascript)
+#### Libraries and external resources used to build this app
+* [Materialize](http://materializecss.com/)
+* [Google Maps API](https://developers.google.com/maps/)
+* [Google Geocoder Api](https://developers.google.com/maps/documentation/geocoding/start)
+* [Google Places API](https://developers.google.com/places/)
+* [jQuery Autocomplete](https://jqueryui.com/autocomplete/)
+* [Airports Open Data](http://ourairports.com/data/)
+* [Nautical Distance algorithm](http://www.geodatasource.com/developers/javascript)
 
 ### Version 1 - compliant with entirety of challenge
 To view: code is on the `master` git branch.
 
 #### Elements of Version 1:
-- Uses jQuery Autocorrect library/API and contains an array of potential search terms in memory
-- Makes a call to Google Maps once search term has been selected in order to receive location information and place marker on map
-- I believe this is a less ideal version than using Google Maps and Places Autocomplete service, which is why Version 2 exists. It is less ideal in that it feels hacky, it requires gumming up browser memory with the contents of a 15k line file, and it is not optimized for queries unlike Google's Autocomplete--all despite the fact that Google's service searches through a range of items far greater than just airports.
+* Uses jQuery Autocorrect library/API and contains an array of potential search terms in memory
+* Makes a call to Google Maps once search term has been selected in order to receive location information and place marker on map
+* I believe this is a less ideal version than using Google Maps and Places Autocomplete service, which is why Version 2 exists. It is less ideal in that it feels hacky, it requires gumming up browser memory with the contents of a 15k line file, and it is not optimized for queries unlike Google's Autocomplete--all despite the fact that Google's service searches through a range of items far greater than just airports.
 
 #### Functions:
 
@@ -43,4 +44,4 @@ To view: code is on the `master` git branch.
 To view: code is on the `working-solution-all-places` git branch.
 
 #### Elements of Version 2:
-- Uses Google Maps/Places for the majority of map, search, and autocomplete functions.
+- Uses Google Maps/Places for the majority of map, search, and autocomplete functions. Autocomplete results include all types of results, not just airports. 
