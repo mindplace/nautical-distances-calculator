@@ -98,7 +98,7 @@ $(document).ready(function() {
   //    I much prefer my previous method of using Google Maps+Places Autocomplete because it
   // delivers a much more professional-feeling experience, both from user and developer side;
   // however Autocomplete and AutocompleteService wasn't able to show only airports.
-  
+
   //   If you'd like to see the other method: git checkout working-solution-all-places
 
    $("#pac-input-from").autocomplete({
@@ -135,7 +135,7 @@ function distance(lat1, lon1, lat2, lon2) {
     return dist;
 }
 
-// once nautical distance is calculated, showNauticalDistance runs to append distance result to the DOM,
+// once both points are available, showNauticalDistance calls distance() and appends nautical distance result to the DOM,
 // as well as build the Polyline between the new points.
 function showNauticalDistance(bothLocations) {
     var lat1 = bothLocations.firstLocation.lat;
