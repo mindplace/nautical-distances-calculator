@@ -39,13 +39,12 @@ function placeMarkerFrom() {
       var addressFrom = '';
       if (placeFrom.address_components) {
           addressFrom = [
-              (placeFrom.address_components[0] && placeFrom.address_components[0].short_name || ''),
-              (placeFrom.address_components[1] && placeFrom.address_components[1].short_name || ''),
+              ((placeFrom.address_components[1] && placeFrom.address_components[1].long_name) + "," || ''),
               (placeFrom.address_components[2] && placeFrom.address_components[2].short_name || '')
           ].join(' ');
       }
 
-      infowindowFrom.setContent('<div><strong>' + placeFrom.name + '</strong><br>' + addressFrom);
+      infowindowFrom.setContent('<div><strong>' + placeFrom.address_components[0].short_name + '</strong><br>' + addressFrom);
       infowindowFrom.open(map, markerFrom);
     });
 };
@@ -83,13 +82,12 @@ function placeMarkerTo() {
       var addressTo = '';
       if (placeTo.address_components) {
         addressTo = [
-          (placeTo.address_components[0] && placeTo.address_components[0].short_name || ''),
-          (placeTo.address_components[1] && placeTo.address_components[1].short_name || ''),
+          ((placeTo.address_components[1] && placeTo.address_components[1].long_name) + "," || ''),
           (placeTo.address_components[2] && placeTo.address_components[2].short_name || '')
         ].join(' ');
       }
 
-      infowindowTo.setContent('<div><strong>' + placeTo.name + '</strong><br>' + addressTo);
+      infowindowTo.setContent('<div><strong>' + placeTo.address_components[0].short_name + '</strong><br>' + addressTo);
       infowindowTo.open(map, markerTo);
     });
 };
