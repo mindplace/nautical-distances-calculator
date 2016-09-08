@@ -10,7 +10,7 @@ function placeMarkerFrom() {
 
     // make call to Geocoder API with the address
     geocoder.geocode( { 'address': address}, function(placeFrom, status) {
-      placeFrom = placeFrom[0]
+      placeFrom = placeFrom[0];
 
       if (!placeFrom.geometry) {
           window.alert("Please check your input! I couldn't find that place!");
@@ -57,7 +57,7 @@ function placeMarkerTo() {
     var address = inputTo.value;
 
     geocoder.geocode( { 'address': address}, function(placeTo, status) {
-      placeTo = placeTo[0]
+      placeTo = placeTo[0];
 
       if (!placeTo.geometry) {
           window.alert("Please check your input! I couldn't find that place!");
@@ -95,9 +95,11 @@ function placeMarkerTo() {
 $(document).ready(function() {
   // use jQuery to do autocomplete from the airportEntries values in 'usa-airports.js' file
 
-  // I much prefer my previous method of using Google Maps+Places Autocomplete because it
+  //    I much prefer my previous method of using Google Maps+Places Autocomplete because it
   // delivers a much more professional-feeling experience, both from user and developer side;
   // however Autocomplete and AutocompleteService wasn't able to show only airports.
+  
+  //   If you'd like to see the other method: git checkout working-solution-all-places
 
    $("#pac-input-from").autocomplete({
       source: airportEntries,
