@@ -1,4 +1,4 @@
-# Moat Challenge Question 2a: Front-End Web Programming
+# Airport to Airport Distance Calculator
 Challenge: Create a web app that calculates the distance (in nautical miles) between two airports. The app should auto-complete the airports and should feature all airports in the U.S. only. Bonus: plot the trip on Google maps.
 
 ## Implementation
@@ -14,14 +14,8 @@ Challenge: Create a web app that calculates the distance (in nautical miles) bet
 
 <hr>
 
-### Version 1 - compliant with entirety of challenge
-To view: code is on the `master` git branch.
-
-#### Elements of Version 1:
 * Uses jQuery Autocorrect library/API and contains an array of potential search terms in memory
 * Makes a call to Google Geocoder API once search term has been selected in order to receive location information and place marker on map
-
-*I believe this is a less ideal version than using Google Maps and Places Autocomplete service, which is why Version 2 exists. It is less ideal in that it feels hacky, it requires gumming up browser memory with the contents of a 15k line file, and it is not optimized for queries unlike Google's Autocomplete--all despite the fact that Google's service searches through a range of items far greater than just airports.*
 
 #### Functions:
 
@@ -41,11 +35,3 @@ To view: code is on the `master` git branch.
 1. On/during pageload: `airportEntries` data in `src/usa-airports.js` is loaded into memory. `initMap()` is called from the script in `index.html`.
 2. On user input, jQuery's Autocomplete library/service is triggered, showing a drop-down menu of potential matches. User selects from list by clicking or via up/down arrows, or by pressing 'enter' on their own inputted search term, sees a marker drop onto the map to mark their search result.
 3. Once user submits both inputs, map boundaries stretch to cover both points. Additionally, `showNauticalDistance()` is triggered, which calls `distance()` with both sets of coordinates to calculate nautical distance, appends result to DOM, and charts the Polyline flight path, deleting any previous Polylines present on the map.
-
-<hr>
-
-### Version 2 - autocompletes all places in addition to airports
-To view: code is on the `working-solution-all-places` git branch.
-
-#### Elements of Version 2:
-- Uses Google Maps/Places for the majority of map, search, and autocomplete functions. Autocomplete results include all types of results, not just airports.
