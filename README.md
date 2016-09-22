@@ -1,9 +1,8 @@
-# Moat Challenge Question 2a: Front-End Web Programming
-Challenge: Create a web app that calculates the distance (in nautical miles) between two airports. The app should auto-complete the airports and should feature all airports in the U.S. only. Bonus: plot the trip on Google maps.
+# Place to Place Nautical Distance Calculator
 
-## Implementation
+This mini app uses a variety of lovely JavaScript libraries to build a lightweight single-page app that calculates distances between two searched locations.
 
-#### Libraries and external resources used to build this app
+#### Libraries and resources used to build this app
 * [Materialize](http://materializecss.com/)
 * [Google Maps API](https://developers.google.com/maps/)
 * [Google Geocoder API](https://developers.google.com/maps/documentation/geocoding/start)
@@ -13,9 +12,6 @@ Challenge: Create a web app that calculates the distance (in nautical miles) bet
 * [Nautical Distance algorithm](http://www.geodatasource.com/developers/javascript)
 
 <hr>
-
-### This branch
-Uses Google Maps/Places for the majority of map, search, and autocomplete functions.
 
 #### Functions:
 
