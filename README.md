@@ -1,4 +1,4 @@
-# [Place to Place Nautical Distance Calculator](http://estherleytush.com/nautical-distances-calculator/)
+# [Place to Place Nautical Distance Calculator](http://mindplace.github.io/nautical-distances-calculator/)
 
 This mini app uses a variety of lovely JavaScript libraries to build a lightweight single-page app that calculates distances between two searched locations.
 
